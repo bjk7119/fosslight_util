@@ -28,6 +28,13 @@ jobs:
       with:
         github_token: ${{ secrets.TOKEN }}
         branch: main
+    - name: Bump version
+      id: get_release
+      uses: agners/get-draft-release@v0.1.0
+      with:
+        tag_name: ${{ steps.get_release.outputs.tag_name }}
+      run:
+        bumpversion --curent-version ${{ steps.get_release.outputs.tag_name }} patch setup.py
 
   deploy:
     runs-on: ubuntu-18.04
