@@ -28,13 +28,16 @@ jobs:
       with:
         github_token: ${{ secrets.TOKEN }}
         branch: main
+
+  Bump-up-version:
+    runs-on: ubuntu-18.04
+    steps:
     - name: Bump up version
+      id: get_release
       uses: agners/get-draft-release@v1.2.2
       with:
         tag_name: ${{ steps.get_release.outputs.tag_name }}
-      id: get_release
-      run: |
-        bumpversion --curent-version 2.0.0 patch setup.py
+      run: bumpversion --curent-version 2.0.0 patch setup.py
       
   deploy:
     runs-on: ubuntu-18.04
