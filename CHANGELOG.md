@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.22 (22/07/2021)
+## Changes
+* No changes
+
+---
+
 ## v1.0.21 (22/07/2021)
 ## Changes
 ## 🔧 Maintenance
