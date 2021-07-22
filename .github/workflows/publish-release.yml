@@ -34,7 +34,7 @@ jobs:
       with:
         tag_name: ${{ steps.get_release.outputs.tag_name }}
     - name: Bump up version
-      run: bumpversion --curent-version 2.0.0 patch setup.py
+      run: bumpversion --curent-version $tag_name patch setup.py
       
 
   deploy:
