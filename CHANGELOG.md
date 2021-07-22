@@ -1,88 +1,69 @@
 # Changelog
 
-## v1.0.10 (15/07/2021)
+## v1.0.20 (22/07/2021)
 ## Changes
 ## 🔧 Maintenance
 
-- Bump up to v1.0.10 @bjk7119 (#19)
-- Remove '.' for version logging @bjk7119 (#18)
+- Modify @bjk7119 (#9)
 
 ---
 
-## v1.0.9 (24/06/2021)
-## Changes
-- Apply Flake8 to check PEP8 @bjk7119 (#11)
-
-## 🐛 Hotfixes
-
-- Fix coloredlogs initial usage error @bjk7119 (#16)
-
-## 🔧 Maintenance
-
-- Delete unnecessary lines at tox.ini @bjk7119 (#17)
-- Modify Color log code using coloredlogs @bjk7119 (#15)
-- Change OSS report name to FOSSLight report @dd-jy (#14)
-- Add lastversion to check the latest version of the package @bjk7119 (#13)
-- Add files for reuse compliance @soimkim (#12)
-
----
-
-## v1.0.8 (15/05/2021)
-## Changes
-- Change default log level @soimkim (#10)
-
----
-
-## v1.0.7 (13/05/2021)
-## Changes
-- Add exit option for Print Help Msg @bjk7119 (#9)
-
----
-
-## v1.0.6 (13/05/2021)
-## Changes
-- Add Common Help Message @bjk7119 (#7)
-
----
-
-## v1.0.5 (13/05/2021)
+## v1.0.19 (22/07/2021)
 ## Changes
 ## 🔧 Maintenance
 
-- Add options to change stream and file log level @dd-jy (#6)
+- Modify publish-release.yml @bjk7119 (#8)
 
 ---
 
-## v1.0.4 (02/05/2021)
-## Changes
-- Do not print empty sheets @soimkim (#5)
-
----
-
-## v1.0.3 (29/04/2021)
-## Changes
-- Add a class for printing spinner @soimkim (#4)
-
----
-
-## v1.0.2 (23/04/2021)
-## Changes
-## 🐛 Hotfixes
-
-- Add a file for constant @soimkim (#3)
-
----
-
-## v1.0.1 (23/04/2021)
+## v1.0.18 (22/07/2021)
 ## Changes
 ## 🔧 Maintenance
 
-- Add common constant variables. @soimkim (#2)
+- Modify publish-release.yml @bjk7119 (#7)
 
 ---
 
-## Release version 1.0 (23/04/2021)
+## v1.0.17 (22/07/2021)
+## Changes
+- Modify publish-release.yml @bjk7119 (#6)
+
+---
+
+## v1.0.16 (22/07/2021)
 ## Changes
 ## 🔧 Maintenance
 
-- Update license in setup.py @soimkim (#1)
+- Modify publish-release.yml @bjk7119 (#5)
+
+---
+
+## v1.0.15 (22/07/2021)
+## Changes
+## 🔧 Maintenance
+
+- Modify publish-release.yml @bjk7119 (#4)
+
+---
+
+## v1.0.14 (22/07/2021)
+## Changes
+## 🔧 Maintenance
+
+- Modify publish-release.yml @bjk7119 (#3)
+
+---
+
+## v1.0.12 (22/07/2021)
+v1.0.12
+---
+
+## Bump up version to 1.0.11 (22/07/2021)
+Release v1.0.11
+---
+
+## v1.0.13 (22/07/2021)
+## Changes
+## 🔧 Maintenance
+
+- Update publish-release.yml file @bjk7119 (#2)
