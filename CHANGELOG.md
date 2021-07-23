@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.23 (23/07/2021)
+## Changes
+## 🔧 Maintenance
+
+- Modify @bjk7119 (#11)
+
+---
+
 ## v1.0.22 (22/07/2021)
 ## Changes
 * No changes
