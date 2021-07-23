@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.27 (23/07/2021)
+## Changes
+- Modify @bjk7119 (#15)
+
+---
+
 ## v1.0.26 (23/07/2021)
 ## Changes
 - Add pip install bumpversion @bjk7119 (#14)
