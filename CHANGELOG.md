@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.25 (23/07/2021)
+## Changes
+- Modify @bjk7119 (#13)
+
+---
+
 ## v1.0.24 (23/07/2021)
 ## Changes
 - Remove using token code @bjk7119 (#12)
