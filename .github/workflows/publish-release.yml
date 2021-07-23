@@ -48,7 +48,7 @@ jobs:
         LAST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
         last_version=$(echo ${LAST_TAG//v/""})
         new_version=$(echo ${NEW_TAG//v/""})
-        bumpversion --current-version $last_version --new-version $new_version setup.py --commit --tag
+        bumpversion --current-version $last_version --new-version $new_version --search $last_version --replace $new_version setup.py --commit --tag
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
