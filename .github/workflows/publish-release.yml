@@ -48,7 +48,7 @@ jobs:
         LAST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
         last_version=$(echo ${LAST_TAG//v/""})
         new_version=$(echo ${NEW_TAG//v/""})
-        bumpversion --current-version $last_version --new-version $new_version --search $last_version --replace $new_version setup.py
+        bumpversion --current-version $(last_version) --new-version $(new_version) --search $(last_version) --replace $(new_version) setup.py
         git config --local user.name "github-actions[bot]"
         git add setup.py
         git commit -m "Update Version in setup.py"
