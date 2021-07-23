@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.0.32 (23/07/2021)
+## Changes
+- Update version @bjk7119 (#20)
+- Modify @bjk7119 (#19)
+
+---
+
 ## v1.0.31 (23/07/2021)
 ## Changes
 - Modify @bjk7119 (#19)
