@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.50 (26/07/2021)
+## Changes
+- Test @bjk7119 (#38)
+
+---
+
 ## v1.0.49 (26/07/2021)
 ## Changes
 - Test @bjk7119 (#37)
@@ -178,11 +184,3 @@
 ## 🔧 Maintenance
 
 - Modify @bjk7119 (#10)
-
----
-
-## v1.0.20 (22/07/2021)
-## Changes
-## 🔧 Maintenance
-
-- Modify @bjk7119 (#9)
