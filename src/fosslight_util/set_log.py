@@ -37,6 +37,8 @@ def init_log(log_file, create_file=True, stream_log_level=logging.INFO, file_log
 
         logger.propagate = False
 
+        logger.warning('TestTestTest')
+
     return logger
 
 
