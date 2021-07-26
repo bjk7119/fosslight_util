@@ -12,27 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: update changelog with gren
-      env:
-        GREN_GITHUB_TOKEN: ${{ secrets.TOKEN }}
-      run: |
-        npm install github-release-notes@0.17.3
-        node_modules/.bin/gren changelog --override
-    - name: Commit files
-      run: |
-        git config --local user.name "github-actions[bot]"
-        git add CHANGELOG.md
-        git commit -m "Update ChangeLog"
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.TOKEN }}
-        branch: main
-
-  bumpup-version:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
       with:
         fetch-depth: 0
     - name: Get Release
@@ -58,12 +37,22 @@ jobs:
         git config --local user.name "github-actions[bot]"
         git add setup.py
         git commit -m "Update Version in setup.py"
+    - name: update changelog with gren
+      env:
+        GREN_GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      run: |
+        npm install github-release-notes@0.17.3
+        node_modules/.bin/gren changelog --override
+    - name: Commit files
+      run: |
+        git config --local user.name "github-actions[bot]"
+        git add CHANGELOG.md
+        git commit -m "Update ChangeLog"
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.TOKEN }}
-        branch: main    
-    
+        branch: main
         
   deploy:
     runs-on: ubuntu-18.04
