@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.41 (26/07/2021)
+## Changes
+- Test Codme @bjk7119 (#29)
+
+---
+
 ## v1.0.40 (26/07/2021)
 ## Changes
 - Develop @bjk7119 (#28)
@@ -186,10 +192,3 @@ v1.0.12
 
 ## Bump up version to 1.0.11 (22/07/2021)
 Release v1.0.11
----
-
-## v1.0.13 (22/07/2021)
-## Changes
-## 🔧 Maintenance
-
-- Update publish-release.yml file @bjk7119 (#2)
