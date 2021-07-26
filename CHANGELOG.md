@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.46 (26/07/2021)
+## Changes
+- Test @bjk7119 (#34)
+
+---
+
 ## v1.0.45 (26/07/2021)
 ## Changes
 - Test @bjk7119 (#33)
@@ -184,11 +190,3 @@
 ## v1.0.17 (22/07/2021)
 ## Changes
 - Modify publish-release.yml @bjk7119 (#6)
-
----
-
-## v1.0.16 (22/07/2021)
-## Changes
-## 🔧 Maintenance
-
-- Modify publish-release.yml @bjk7119 (#5)
