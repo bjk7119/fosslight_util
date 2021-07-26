@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.0.44 (26/07/2021)
+## Changes
+- Test @bjk7119 (#32)
+- Test @bjk7119 (#31)
+
+---
+
 ## v1.0.43 (26/07/2021)
 ## Changes
 - Test @bjk7119 (#31)
@@ -187,11 +194,3 @@
 ## 🔧 Maintenance
 
 - Modify publish-release.yml @bjk7119 (#4)
-
----
-
-## v1.0.14 (22/07/2021)
-## Changes
-## 🔧 Maintenance
-
-- Modify publish-release.yml @bjk7119 (#3)
