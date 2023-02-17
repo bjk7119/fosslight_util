@@ -17,12 +17,14 @@ from datetime import datetime
 from pathlib import Path
 from fosslight_util._get_downloadable_url import get_downloadable_url
 from fosslight_util.help import print_help_msg_download
+from fosslight_util.download_ftp import download_ftp_tree
 import fosslight_util.constant as constant
 from fosslight_util.set_log import init_log
 import signal
 import time
 import threading
 import platform
+import ftplib
 
 logger = logging.getLogger(constant.LOGGER_NAME)
 compression_extension = {".tar.bz2", ".tar.gz", ".tar.xz", ".tgz", ".tar", ".zip", ".jar", ".bz2"}
@@ -84,7 +86,6 @@ def main():
     parser.add_argument('-d', '--log_dir', help='Directory to save log file', type=str, dest='log_dir', default="")
 
     src_link = ""
-    src_info = {}
     target_dir = os.getcwd()
     log_dir = os.getcwd()
 
@@ -125,18 +126,32 @@ def cli_download_and_extract(link, target_dir, log_dir, checkout_to="", compress
             success = False
             msg = f"The target directory exists as a file.: {target_dir}"
         else:
-            src_info = parse_src_link(link)
-            link = src_info.get("url", "")
-            tag = ''.join(src_info.get("tag",  "")).split('=')[-1]
-            branch = ''.join(src_info.get("branch", "")).split('=')[-1]
+            if link.startswith("ftp://"):
+                logger.warning("aaaaaaaaaaaaa")
+                # ftp = FTP(link.replace("ftp://", ""))
+                try:
+                    logger.warning('bbbbbbbbbbbb')
+                    ftp = ftplib.FTP('ftp.debian.org')
+                    logger.warning('cccccccccccccccccccccccc')
+                    success = download_ftp_tree(ftp, '/debian/pool/main/n/netbase',
+                                                target_dir, pattern=None,
+                                                overwrite=False, guess_by_extension=True)
+                except Exception as e:
+                    logger.error(e)
+                logger.warning(f"success: {success} ")
+            else:
+                src_info = parse_src_link(link)
+                link = src_info.get("url", "")
+                tag = ''.join(src_info.get("tag",  "")).split('=')[-1]
+                branch = ''.join(src_info.get("branch", "")).split('=')[-1]
 
-            if not download_git_clone(link, target_dir, checkout_to, tag, branch):
-                if os.path.isfile(target_dir):
-                    shutil.rmtree(target_dir)
+                if not download_git_clone(link, target_dir, checkout_to, tag, branch):
+                    if os.path.isfile(target_dir):
+                        shutil.rmtree(target_dir)
 
-                success, downloaded_file = download_wget(link, target_dir, compressed_only)
-                if success:
-                    success = extract_compressed_file(downloaded_file, target_dir, True)
+                    success, downloaded_file = download_wget(link, target_dir, compressed_only)
+                    if success:
+                        success = extract_compressed_file(downloaded_file, target_dir, True)
     except Exception as error:
         success = False
         msg = str(error)
